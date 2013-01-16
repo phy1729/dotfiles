@@ -1,0 +1,27 @@
+"hg6880
+
+loadplugins '\.(js|penta)$'
+group user
+command! -nargs=1 H tab help <args>
+map -count -modes=n,v <Esc><Esc> -builtin <count><C-v><Esc>
+map -modes=n,v ga -ex :tabopen http://arstechnica.com/
+map -modes=n,v gc -ex :tabopen https://www.google.com/calendar/render
+map -modes=n,v ge -ex :tabopen https://elearning.utdallas.edu/webapps/portal/frameset.jsp
+map -modes=n,v gf -ex :tabopen https://www.facebook.com/
+map -modes=n,v gi -ex :tabopen http://irc.madhax.net/
+map -modes=n,v gm -ex :tabopen https://mail.google.com/mail/u/0/?shva=1#inbox
+map -modes=n,v gp -ex :tabopen https://www.facebook.com/pokes
+map -modes=n,v gr -ex :tabopen https://www.google.com/reader/view/#overview-page
+map -modes=n,v gs -ex :tabopen about:sync-tabs
+map -count -modes=n,v gt -builtin <count><C-Tab>
+map -modes=n,v gv -ex :tabopen chrome://lastpass/content/home.xul
+map -modes=n,v gz -ex :tabopen https://zmail.utdallas.edu/zimbra/
+map -count -modes=n,v K -builtin <count><C-S-Tab>
+map -count -modes=n,v p -builtin <count>fback1
+map -count -modes=n,v J -builtin <count><C-Tab>
+set passkeys=www.facebook.com:<CR>,google.com/reader/:npjkm,<S-n>,<S-p>,<S-o>,mail.google.com:!#jknpxeo?,gi
+set tabclose=opener,previous,left,right
+set tabopen=link:right,orphan:end,external:end
+set titlestring=''
+
+" vim: set ft=pentadactyl:
