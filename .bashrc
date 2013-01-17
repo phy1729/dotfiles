@@ -12,6 +12,8 @@ case $(uname -s) in
 		;;
 	Linux|OpenBSD)
 		alias ls='ls -AhlF'
+		function say { mplayer -really-quiet "http://translate.google.com/translate_tts?tl=en&q=$1"; }
+		alias playdir="mplayer -shuffle -playlist <(find -L \"`pwd`\" -type f)"
 		;;
 esac
 
