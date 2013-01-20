@@ -121,6 +121,9 @@ if executable("git")
 	" Bundle 'ShowMarks'
 	
 	Bundle 'michaeljsmith/vim-indent-object'
+
+	Bundle 'mbbill/undotree'
+	nnoremap <leader>u :UndotreeToggle
 endif
 " end Vundle
 
