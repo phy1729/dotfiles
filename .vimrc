@@ -104,8 +104,8 @@ if executable("git")
 
 	" Colorscheme
 	Bundle 'altercation/vim-colors-solarized'
-	colorscheme solarized
 	let g:solarized_termcolors=256
+	colorscheme solarized
 	highlight Comment ctermfg=brown
 
 	" SkyBison
@@ -124,10 +124,11 @@ if executable("git")
 
 	Bundle 'mbbill/undotree'
 	nnoremap <leader>u :UndotreeToggle
+else
+	colorscheme desert
 endif
-" end Vundle
-
 filetype plugin indent on
+" end Vundle
 
 " Credit: http://vimcasts.org/episodes/tidying-whitespace/
 function! Preserve(command)
