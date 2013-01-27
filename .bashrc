@@ -10,10 +10,13 @@ case $(uname -s) in
 		alias ls='ls -AehlFWO'
 		alias brewup='brew update; brew upgrade'
 		;;
-	Linux|OpenBSD)
-		alias ls='ls -AhlF'
+	Linux)
+		alias ls='ls -AhlF --color'
 		function say { mplayer -really-quiet "http://translate.google.com/translate_tts?tl=en&q=$1"; }
 		alias playdir="mplayer -shuffle -playlist <(find -L \"`pwd`\" -type f)"
+		;;
+	OpenBSD)
+		alias ls='ls -AhlF'
 		;;
 esac
 
