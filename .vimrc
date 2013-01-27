@@ -113,7 +113,7 @@ if executable("git")
 	nnoremap <leader>:b 2:<c-u>call SkyBison("b ")<cr>
 	nnoremap <leader>:t 2:<c-u>call SkyBison("tag ")<cr>
 	nnoremap <leader>:h 2:<c-u>call SkyBison("h ")<cr>
-	nnoremap <leader>:e :<c-u>call SkyBison("e ")<cr>endif
+	nnoremap <leader>:e :<c-u>call SkyBison("e ")<cr>
 
 	" Unix nicities
 	Bundle 'tpope/vim-eunuch'
