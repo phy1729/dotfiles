@@ -124,6 +124,8 @@ if executable("git")
 
 	Bundle 'mbbill/undotree'
 	nnoremap <leader>u :UndotreeToggle
+
+	Bundle 'godlygeek/tabular'
 else
 	colorscheme desert
 endif
