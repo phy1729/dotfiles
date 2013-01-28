@@ -9,6 +9,8 @@ case $(uname -s) in
 	Darwin)
 		alias ls='ls -AehlFWO'
 		alias brewup='brew update; brew upgrade'
+		alias scd='. ~/bin/scd'
+		alias note='scd; vim notes.tex'
 		;;
 	Linux|OpenBSD)
 		alias ls='ls -AhlF'
