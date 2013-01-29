@@ -9,7 +9,7 @@ case $(uname -s) in
 	Darwin)
 		alias ls='ls -AehlFWO'
 		function brewup { brew update; brew upgrade; }
-		function note { . ~/bin/scd; vim notex.tex; }
+		function note { . ~/bin/scd; vim notes.tex; }
 		;;
 	Linux)
 		alias ls='ls -AhlF --color'
