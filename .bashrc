@@ -8,14 +8,13 @@ alias c='ssh c'
 case $(uname -s) in
 	Darwin)
 		alias ls='ls -AehlFWO'
-		alias brewup='brew update; brew upgrade'
-		alias scd='. ~/bin/scd'
-		alias note='scd; vim notes.tex'
+		function brewup { brew update; brew upgrade; }
+		function note { . ~/bin/scd; vim notex.tex; }
 		;;
 	Linux)
 		alias ls='ls -AhlF --color'
 		function say { mplayer -really-quiet "http://translate.google.com/translate_tts?tl=en&q=$1"; }
-		alias playdir="mplayer -shuffle -playlist <(find -L \"`pwd`\" -type f)"
+		function playdir { mplayer -shuffle -playlist <(find -L \"`pwd`\" -type f); }
 		;;
 	OpenBSD)
 		alias ls='ls -AhlF'
@@ -23,6 +22,7 @@ case $(uname -s) in
 esac
 
 
+function u { cd ~/.dotfiles; git pull; cd - 1>/dev/null; }
 function cvtun { ssh -N phy1729@n.collegiumv.org -L 22`printf "%02d" $1`:192.168.42.$1:$2; }
 function ssh-copy-id { cat ~/.ssh/id_dsa.pub | ssh $1 'cat >> ~/.ssh/authorized_keys'; }
 # map :h to opening vim's help in fullscreen
