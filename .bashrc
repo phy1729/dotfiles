@@ -111,7 +111,7 @@ function disk_color()
 	if [ ! -w "${PWD}" ] ; then
 		echo -en ${Red} # No 'write' privilege in the current directory.
 	elif [ -s "${PWD}" ] ; then
-		local used=$(command df -P "$PWD" | awk 'END {print $5} {sub(/%/,"", $5)}')
+		local used=$(command df -P "$PWD" | awk 'END {print $5}' | sed 's/%//')
 		if [ ${used} -gt 95 ]; then
 			echo -en ${ALERT}	# Disk almost full (>95%).
 		elif [ ${used} -gt 90 ]; then
