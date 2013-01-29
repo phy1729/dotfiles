@@ -10,6 +10,7 @@ case $(uname -s) in
 		alias ls='ls -AehlFWO'
 		function brewup { brew update; brew upgrade; }
 		function note { . ~/bin/scd; vim notes.tex; }
+		function irc { ssh c.collegiumv.org -t tmux attach -d; }
 		;;
 	Linux)
 		alias ls='ls -AhlF --color'
