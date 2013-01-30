@@ -15,7 +15,7 @@ case $(uname -s) in
 	Linux)
 		alias ls='ls -AhlF --color'
 		function say { mplayer -really-quiet "http://translate.google.com/translate_tts?tl=en&q=$1"; }
-		function playdir { mplayer -shuffle -playlist <(find -L \"`pwd`\" -type f); }
+		function playdir { mplayer -shuffle -playlist <(find -L "$(pwd)" -type f); }
 		;;
 	OpenBSD)
 		alias ls='ls -AhlF'
