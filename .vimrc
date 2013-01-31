@@ -42,36 +42,33 @@ if v:version > 703 || v:version == 703 && has("patch541")
 end
 set whichwrap+=<,>	" Let left and right wrap from line to line
 
-map <leader>t :w \| !pdflatex '%'<cr>
+nnoremap <leader>t :w \| !pdflatex '%'<cr>
+nnoremap <leader>p :setlocal paste!<cr>
 
 " Spelling
-map <leader>ss :setlocal spell! spelllang=en_us<cr>
-map <leader>sn ]s
-map <leader>sp [s
-map <leader>sa zg
-map <leader>s? z=
+nnoremap <leader>ss :setlocal spell! spelllang=en_us<cr>
+nnoremap <leader>sn ]s
+nnoremap <leader>sp [s
+nnoremap <leader>sa zg
+nnoremap <leader>s? z=
 
 " Window movement
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
-map Y y$	" Be consistant
+nnoremap Y y$	" Be consistant
 nnoremap Q gQ	" I want my tab complete
 
 "Center screen after searching
 map N Nzz
 map n nzz
 
-
 set background=dark
 set autoindent
 set smartindent
 syntax on
-
-set pastetoggle=<F2>
-map <leader>p :setlocal paste!<cr>
 
 if has("autocmd")
 	" Jump to last-known-position when editing files
@@ -123,7 +120,7 @@ if executable("git")
 	Bundle 'michaeljsmith/vim-indent-object'
 
 	Bundle 'mbbill/undotree'
-	nnoremap <leader>u :UndotreeToggle
+	nnoremap <leader>u :UndotreeToggle<cr>
 
 	Bundle 'godlygeek/tabular'
 else
