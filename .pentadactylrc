@@ -19,7 +19,7 @@ map -modes=n,v gz -ex :tabopen https://zmail.utdallas.edu/zimbra/
 map -count -modes=n,v K -builtin <count><C-S-Tab>
 map -count -modes=n,v p -builtin <count>fback1
 map -count -modes=n,v J -builtin <count><C-Tab>
-set passkeys=www.facebook.com:<CR>,google.com/reader/:npjkm,<S-n>,<S-p>,<S-o>,mail.google.com:!#jknpxeo?,gi
+set passkeys=www.facebook.com:<CR>,google.com/reader/:npjkm,<S-n>,<S-p>,<S-o>,mail.google.com:!#jknpxeo?,gi,zmail.utdallas.edu:jkco=?
 set tabclose=opener,previous,left,right
 set tabopen=link:right,orphan:end,external:end
 set titlestring=''
