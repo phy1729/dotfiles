@@ -123,6 +123,10 @@ if executable("git")
 	nnoremap <leader>u :UndotreeToggle<cr>
 
 	Bundle 'godlygeek/tabular'
+	nnoremap <leader>Tm :Tabularize /&<cr>
+	vnoremap <leader>Tm :Tabularize /&<cr>
+	nnoremap <leader>TM :Tabularize /\v(\&\|\\\\)<cr>
+	vnoremap <leader>TM :Tabularize /\v(\&\|\\\\)<cr>
 else
 	colorscheme desert
 endif
