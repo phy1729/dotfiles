@@ -80,8 +80,8 @@ if has("autocmd")
 
 	" Makes .sh and .pl files executable
 	if has ("unix")
-		autocmd BufWritePost    *.sh      !chmod +x %
-		autocmd BufWritePost    *.pl      !chmod +x %
+		autocmd BufWritePost    *.sh      silent !chmod +x %
+		autocmd BufWritePost    *.pl      silent !chmod +x %
 	endif
 endif
 
