@@ -58,8 +58,10 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-nnoremap Y y$	" Be consistant
-nnoremap Q gQ	" I want my tab complete
+" Be consistent
+nnoremap Y y$
+" I want my tab complete
+nnoremap Q gQ
 
 "Center screen after searching
 map N Nzz
