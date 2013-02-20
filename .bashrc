@@ -19,6 +19,7 @@ case $(uname -s) in
 		;;
 	OpenBSD)
 		alias ls='ls -AhlF'
+		export PKG_PATH=ftp://filedump.se.rit.edu/pub/OpenBSD/$(uname -r)/packages/$(uname -p)/
 		;;
 esac
 
