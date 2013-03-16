@@ -58,6 +58,8 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+" For the all to often :Q typo
+com Q q
 " Be consistent
 nnoremap Y y$
 " I want my tab complete
@@ -103,6 +105,7 @@ if executable("git")
 
 	" Colorscheme
 	Bundle 'altercation/vim-colors-solarized'
+	let g:solarized_termcolors=256
 	colorscheme solarized
 	highlight Comment ctermfg=brown
 
