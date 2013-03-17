@@ -9,6 +9,9 @@ setopt appendhistory autocd beep extendedglob nomatch
 bindkey -e
 # End of lines configured by zsh-newuser-install
 
+autoload -Uz compinit
+compinit
+
 setopt correctall histignorespace ignoreeof noclobber automenu
 compctl -g '*.tex' +  vim
 fignore=( .aux .log .pdf )
