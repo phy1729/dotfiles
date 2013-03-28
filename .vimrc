@@ -59,7 +59,7 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 " For the all to often :Q typo
-com Q q
+com! -bang Q q<bang>
 " Be consistent
 nnoremap Y y$
 " I want my tab complete
