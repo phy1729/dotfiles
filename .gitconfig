@@ -5,3 +5,5 @@
 	editor = vim
 [merge]
 	tool = vimdiff
+[github]
+	user = phy1729
