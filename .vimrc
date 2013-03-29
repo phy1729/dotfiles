@@ -131,6 +131,11 @@ if executable("git")
 	vnoremap <leader>Tm :Tabularize /&<cr>
 	nnoremap <leader>TM :Tabularize /\v(\&\|\\\\)<cr>
 	vnoremap <leader>TM :Tabularize /\v(\&\|\\\\)<cr>
+
+	Bundle 'mattn/webapi-vim'
+	Bundle 'mattn/gist-vim'
+	let g:gist_clip_command = 'pbcopy'
+	let g:gist_post_private = 1
 else
 	colorscheme desert
 endif
