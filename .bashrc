@@ -29,6 +29,7 @@ function cvtun { ssh -N phy1729@n.collegiumv.org -L 22`printf "%02d" $1`:192.168
 function ssh-copy-id { cat ~/.ssh/id_dsa.pub | ssh $1 'cat >> ~/.ssh/authorized_keys'; }
 # map :h to opening vim's help in fullscreen
 function :h () { vim +"h $1" +only; }
+function :BI () { vim -u NONE +'silent! source ~/.vimrc' +BundleInstall! +qa; }
 
 
 # Define prompt
