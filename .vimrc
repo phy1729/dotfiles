@@ -84,8 +84,8 @@ if has("autocmd")
 
 	" Makes .sh and .pl files executable
 	if has ("unix")
-		autocmd BufWritePost    *.sh      silent !chmod +x %
-		autocmd BufWritePost    *.pl      silent !chmod +x %
+		autocmd BufWritePost *.sh silent !chmod +x %
+		autocmd BufWritePost *.pl silent !chmod +x %
 	endif
 endif
 
@@ -144,15 +144,15 @@ filetype plugin indent on
 
 " Credit: http://vimcasts.org/episodes/tidying-whitespace/
 function! Preserve(command)
-  " Preparation: save last search, and cursor position.
-  let _s=@/
-  let l = line(".")
-  let c = col(".")
-  " Do the business:
-  execute a:command
-  " Clean up: restore previous search history, and cursor position
-  let @/=_s
-  call cursor(l, c)
+	" Preparation: save last search, and cursor position.
+	let _s=@/
+	let l = line(".")
+	let c = col(".")
+	" Do the business:
+	execute a:command
+	" Clean up: restore previous search history, and cursor position
+	let @/=_s
+	call cursor(l, c)
 endfunction
 nmap <leader>$ :call Preserve("%s/\\s\\+$//e")<CR>
 nmap <leader>= :call Preserve("normal gg=G")<CR>
