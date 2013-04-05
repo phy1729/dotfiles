@@ -131,6 +131,8 @@ if executable("git")
 	vnoremap <leader>Tm :Tabularize /&<cr>
 	nnoremap <leader>TM :Tabularize /\v(\&\|\\\\)<cr>
 	vnoremap <leader>TM :Tabularize /\v(\&\|\\\\)<cr>
+	nnoremap <leader>T# :Tabularize /#<cr>
+	vnoremap <leader>T# :Tabularize /#<cr>
 
 	Bundle 'mattn/webapi-vim'
 	Bundle 'mattn/gist-vim'
