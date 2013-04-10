@@ -43,6 +43,7 @@ end
 set whichwrap+=<,>	" Let left and right wrap from line to line
 
 nnoremap <leader>t :w \| !pdflatex '%'<cr>
+nnoremap <leader>o :! open '%:r.pdf'<cr><cr>
 nnoremap <leader>p :setlocal paste!<cr>
 
 " Spelling
