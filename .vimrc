@@ -40,7 +40,6 @@ set formatoptions=rol1	" Make comments and word wrapping work properly
 if v:version > 703 || v:version == 703 && has("patch541")
 	set formatoptions+=j	" Make joining work properly
 end
-set whichwrap+=<,>	" Let left and right wrap from line to line
 
 nnoremap <leader>t :w \| !pdflatex '%'<cr>
 nnoremap <leader>o :! open '%:r.pdf'<cr><cr>
@@ -48,10 +47,6 @@ nnoremap <leader>p :setlocal paste!<cr>
 
 " Spelling
 nnoremap <leader>ss :setlocal spell! spelllang=en_us<cr>
-nnoremap <leader>sn ]s
-nnoremap <leader>sp [s
-nnoremap <leader>sa zg
-nnoremap <leader>s? z=
 
 " Window movement
 nnoremap <C-h> <C-w>h
@@ -109,13 +104,6 @@ if executable("git")
 	let g:solarized_termcolors=256
 	colorscheme solarized
 	highlight Comment ctermfg=brown
-
-	" SkyBison
-	Bundle 'paradigm/SkyBison'
-	nnoremap <leader>:b 2:<c-u>call SkyBison("b ")<cr>
-	nnoremap <leader>:t 2:<c-u>call SkyBison("tag ")<cr>
-	nnoremap <leader>:h 2:<c-u>call SkyBison("h ")<cr>
-	nnoremap <leader>:e :<c-u>call SkyBison("e ")<cr>
 
 	" Unix nicities
 	Bundle 'tpope/vim-eunuch'
