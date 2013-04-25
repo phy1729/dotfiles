@@ -1,4 +1,4 @@
-"hg6896
+"hg6904
 
 loadplugins '\.(js|penta)$'
 group user
@@ -23,6 +23,7 @@ map -count -modes=n,v K -builtin <count><C-S-Tab>
 map -count -modes=n,v p -builtin <count>fback1
 map -count -modes=n,v J -builtin <count><C-Tab>
 set passkeys=www.facebook.com:<CR>,google.com/reader/:npjkm,<S-n>,<S-p>,<S-o>,mail.google.com:!#jknpxeo?,gi,zmail.utdallas.edu:jkco=?
+set timeoutlen=200
 set titlestring=''
 
 " vim: set ft=pentadactyl:
