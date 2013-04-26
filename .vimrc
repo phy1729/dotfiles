@@ -5,7 +5,7 @@ set title
 set lazyredraw
 set hidden
 
-set backupdir=~/tmp,/var/tmp,$HOME/Local\ Settings/Temp 
+set backupdir=~/tmp,/var/tmp,$HOME/Local\ Settings/Temp
 
 " Don't beep
 set visualbell
@@ -109,7 +109,7 @@ if executable("git")
 	Bundle 'tpope/vim-eunuch'
 
 	" Bundle 'ShowMarks'
-	
+
 	Bundle 'michaeljsmith/vim-indent-object'
 
 	Bundle 'mbbill/undotree'
