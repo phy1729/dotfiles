@@ -56,6 +56,8 @@ nnoremap <C-l> <C-w>l
 
 " For the all to often :Q typo
 com! -bang Q q<bang>
+" Fullscreen help
+com! -narg=1 -complete=help H h <args> <bar> only
 " Be consistent
 nnoremap Y y$
 " I want my tab complete
