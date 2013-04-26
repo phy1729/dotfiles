@@ -46,7 +46,7 @@ nnoremap <leader>o :! open '%:r.pdf'<cr><cr>
 nnoremap <leader>p :setlocal paste!<cr>
 
 " Spelling
-nnoremap <leader>ss :setlocal spell! spelllang=en_us<cr>
+nnoremap <leader>ss :setlocal spell! spelllang=en_us<cr>:syntax sync fromstart<cr>
 
 " Window movement
 nnoremap <C-h> <C-w>h
