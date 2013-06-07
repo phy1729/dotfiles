@@ -119,6 +119,8 @@ if executable("git")
 
 	Bundle 'michaeljsmith/vim-indent-object'
 
+	Bundle 'paradigm/TextObjectify'
+
 	Bundle 'mbbill/undotree'
 	nnoremap <leader>u :UndotreeToggle<cr>
 
