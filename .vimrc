@@ -5,7 +5,13 @@ set title
 set lazyredraw
 set hidden
 
-set backupdir=~/tmp,/var/tmp,$HOME/Local\ Settings/Temp
+set backupdir=~/tmp,/tmp,/var/tmp,$HOME/Local\ Settings/Temp
+set undodir=~/.vim/undodir
+set undofile
+set undolevels=1000
+if ! isdirectory(expand("~/.vim/undodir"))
+	call mkdir(expand("~/.vim/undodir"),"p",0700)
+end
 
 " Don't beep
 set visualbell
