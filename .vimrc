@@ -37,7 +37,7 @@ set ignorecase
 set smartcase
 set incsearch
 set hlsearch
-set magic		" Make Regex *magic*
+set magic
 
 set number
 set scrolloff=4
@@ -75,7 +75,6 @@ map n nzz
 
 set background=dark
 set autoindent
-set smartindent
 syntax on
 
 if has("autocmd")
