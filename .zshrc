@@ -44,7 +44,7 @@ case $(uname -s) in
 esac
 
 
-function u { cd ~/.dotfiles; git pull; cd - 1>/dev/null; }
+function u { cd ~/.dotfiles; git pull; cd - 1>/dev/null; ~/bin/dfm }
 function cvtun { ssh -N phy1729@n.collegiumv.org -L 22$(printf "%02d" $1):192.168.42.$1:$2; }
 function cvssh { ssh -At phy1729@n.collegiumv.org ssh $1 }
 function ssh-copy-id { cat ~/.ssh/id_dsa.pub | ssh $1 'cat >> ~/.ssh/authorized_keys'; }
