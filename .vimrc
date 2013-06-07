@@ -29,7 +29,10 @@ set autoread
 
 set wildmenu
 set wildmode=longest:full,full
-set wildignore=*.swp
+set wildignore=*.swp,*.aux,*.pdf
+if exists("+wildignorecase")
+	set wildignorecase
+endif
 set showcmd
 
 " Searching make it smart, incremental, and hilight
