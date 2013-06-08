@@ -97,7 +97,7 @@ endif
 
 
 "Vundle
-if executable("git")
+if isdirectory(expand("~/.vim/bundle/vundle"))
 	" Standard Vundle stuff
 	filetype off
 	set rtp+=~/.vim/bundle/vundle/
