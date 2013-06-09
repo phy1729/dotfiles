@@ -8,4 +8,4 @@
 [github]
 	user = phy1729
 [push]
-	default = simple
+	default = current
