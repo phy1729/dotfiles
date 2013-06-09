@@ -104,6 +104,8 @@ bindsym $mod+Shift+parenright move container to workspace 10
 bindsym $mod+Shift+C reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+R restart
+# lock i3
+bindsym $mod+x exec i3lock -c 000000
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+E exit
 
