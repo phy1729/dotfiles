@@ -1,1 +1,6 @@
 xterm*termName: xterm-256color
+
+! Don't scroll down on output
+xterm*scrollTtyOutput: false
+xterm*scrollBar: true
+xterm*rightScrollBar: true
