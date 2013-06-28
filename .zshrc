@@ -18,7 +18,6 @@ fignore=( .aux .log .pdf )
 setopt autopushd pushdminus pushdsilent pushdtohome
 DIRSTACKSIZE=8
 
-export PATH=/usr/local/bin:$PATH:/usr/local/sbin:~/bin
 export PROMPT="%n@%m:%~%# "
 
 alias v='vim'
