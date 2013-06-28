@@ -51,7 +51,7 @@ if v:version > 703 || v:version == 703 && has("patch541")
 end
 
 nnoremap <leader>t :w \| !pdflatex '%'<cr>
-nnoremap <leader>o :! open '%:r.pdf'<cr><cr>
+nnoremap <leader>o :! xdg-open '%:r.pdf' & <cr><cr>
 nnoremap <leader>p :setlocal paste!<cr>
 
 " Spelling
