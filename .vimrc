@@ -139,6 +139,8 @@ if isdirectory(expand("~/.vim/bundle/vundle"))
 	Bundle 'mattn/gist-vim'
 	let g:gist_clip_command = 'pbcopy'
 	let g:gist_post_private = 1
+
+	Bundle 'dahu/LearnVim'
 else
 	colorscheme desert
 endif
