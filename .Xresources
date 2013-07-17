@@ -2,8 +2,6 @@ xterm*termName: xterm-256color
 
 ! Don't scroll down on output
 xterm*scrollTtyOutput: false
-xterm*scrollBar: true
-xterm*rightScrollBar: true
 
 ! Make links clickable (kinda)
 *VT100*translations: #override Meta <Btn1Up>: exec-formatted("x-www-browser '%t'", PRIMARY)
