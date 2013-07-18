@@ -105,10 +105,11 @@ if isdirectory(expand("~/.vim/bundle/vundle"))
 	call vundle#rc()
 	Bundle 'gmarik/vundle'
 
-	" Powerline
-	Bundle 'Lokaltog/vim-powerline'
+	" Airline
+	Bundle 'bling/vim-airline'
 	set laststatus=2
-	let g:Powerline_symbols = 'unicode'
+	let g:airline_left_sep = '▶'
+	let g:airline_right_sep = '◀'
 
 	" Colorscheme
 	Bundle 'altercation/vim-colors-solarized'
