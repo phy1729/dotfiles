@@ -1,4 +1,4 @@
-xterm*termName: xterm-256color
+xterm.termName: xterm-256color
 
 ! Don't scroll down on output
 xterm*scrollTtyOutput: false
