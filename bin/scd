@@ -1,24 +1,22 @@
 #!/bin/bash
 
-ROOT="/Users/phy1729/Dropbox/school/14/S"
-HOUR=$(date +"%H")
+root="$HOME/Dropbox/school/15/F"
+hour=$(date +"%H")
 case $(date +"%w") in
 	1|3|5)
-		if [ $HOUR -lt 15 ]; then
-			cd $ROOT/PHYS3411/
-		elif [ $HOUR -eq 15 ]; then
-			cd $ROOT/MATH3379/
+		if [ $hour -lt 12 ]; then
+			cd $root/PHYS3416/
+		elif [ $hour -gt 14 ]; then
+			cd $root/MATH4341/
 		else
-			cd $ROOT/MATH3312/
+			cd $root/GOVT2301/
 		fi
 		;;
 	2|4)
-		if [ $HOUR -lt 12 ]; then
-			cd $ROOT/PHYS4311/
-		elif [ $HOUR -gt 14 ]; then
-			cd $ROOT/MATH4V91/
+		if [ $hour -lt 15 ]; then
+			cd $root/PHYS4301/
 		else
-			cd $ROOT/PHYS3325/
+			cd $root/MATH4301/
 		fi
 		;;
 esac
