@@ -11,3 +11,7 @@
 	default = current
 [color]
 	ui = true
+[alias]
+	co = checkout
+	review = diff --staged
+	st = status -sb
