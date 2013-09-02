@@ -1,4 +1,4 @@
-"hg6928
+"hg6942
 
 loadplugins '\.(js|penta)$'
 group user
@@ -24,7 +24,7 @@ map -count -modes=n,v p -builtin <count>fback1
 map -count -modes=n,v J -builtin <count><C-Tab>
 map -count -modes=n,v V -builtin <C-v>n<C-v>m<C-v>vgT
 set defsearch=duckduckgo
-set passkeys=www.facebook.com:<CR>,feedly.com:jknpvmo?,google.com/calendar/:jknprt12345?,google.com/reader/:npjkm,<S-n>,<S-p>,<S-o>,mail.google.com:!#jknpxeo?,gi,zmail.utdallas.edu:jkco=?
+set passkeys=www.facebook.com:<CR>,feedly.com:jknpvmo?,google.com/calendar/:jknpr12345?,google.com/reader/:npjkm,<S-n>,<S-p>,<S-o>,mail.google.com:!#jknpxeo?,gi,zmail.utdallas.edu:jko=?
 set timeoutlen=200
 set titlestring=''
 
