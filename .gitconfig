@@ -9,3 +9,5 @@
 	user = phy1729
 [push]
 	default = current
+[color]
+	ui = true
