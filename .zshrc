@@ -28,7 +28,6 @@ case $(uname -s) in
 	Darwin)
 		alias ls='ls -AehlFGWO'
 		function brewup { brew update; brew upgrade; }
-		function note { . ~/bin/scd; vim notes.tex; }
 		function irc { ssh c.collegiumv.org -t tmux attach -d; }
 		;;
 	Linux)
@@ -43,6 +42,7 @@ case $(uname -s) in
 esac
 
 
+function note { . ~/bin/scd; vim notes.tex; }
 function u { cd ~/.dotfiles; git pull; cd - 1>/dev/null; ~/bin/dfm }
 function irc { ssh c.collegiumv.org -t tmux attach -d; }
 function cvtun { ssh -N phy1729@n.collegiumv.org -L 22$(printf "%02d" $1):192.168.42.$1:$2; }
