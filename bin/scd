@@ -19,4 +19,7 @@ case $(date +"%w") in
 			cd $root/MATH4301/
 		fi
 		;;
+	*)
+		cd $root
+		;;
 esac
