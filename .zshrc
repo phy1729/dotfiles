@@ -50,5 +50,6 @@ function cvssh { ssh -At phy1729@n.collegiumv.org ssh $1 }
 function cvrdc { ssh -fNML 122$(printf "%02d" $1):192.168.42.$1:3389 -S ~/.cvrdc:$1 phy1729@n.collegiumv.org; rdesktop -u phy1729 -d collegiumv.org -p - -f 127.0.0.1:122$(printf "%02d" $1); ssh -S ~/.cvrdc:$1 -O exit localhost; }
 function ssh-copy-id { cat ~/.ssh/id_dsa.pub | ssh $1 'cat >> ~/.ssh/authorized_keys'; }
 # map :h to opening vim's help in fullscreen
-function :h () { vim +"h $1" +only; }
+alias :h='noglob :h-helper'
+function :h-helper () { vim +"h $1" +only; }
 function :BI () { vim -u NONE +'silent! source ~/.vimrc' +BundleInstall! +qa; }
