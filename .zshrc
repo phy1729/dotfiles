@@ -14,7 +14,7 @@ compinit
 
 setopt correctall histignorespace ignoreeof noclobber automenu
 compctl -g '*.tex' +  vim
-fignore=( .aux .log .pdf )
+fignore=( .aux .pdf )
 setopt autopushd pushdminus pushdsilent pushdtohome
 DIRSTACKSIZE=8
 
