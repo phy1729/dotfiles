@@ -1,4 +1,4 @@
-"hg6942
+"hg6975
 
 loadplugins '\.(js|penta)$'
 group user
@@ -17,7 +17,8 @@ map -modes=n,v gr -ex :tabopen http://cloud.feedly.com/#latest
 map -modes=n,v gs -ex :tabopen about:sync-tabs
 map -count -modes=n,v gt -builtin <count><C-Tab>
 map -modes=n,v gv -ex :tabopen chrome://lastpass/content/home.xul
-map -modes=n,v gw -ex :tabopen http://www.weather.com/weather/hourbyhour/graph/Richardson+TX+75080:4:US
+map -modes=n,v gw -ex :tabopen https://webmail.utdallas.edu/owa/
+map -modes=n,v gW -ex :tabopen http://www.weather.com/weather/hourbyhour/graph/Richardson+TX+75080:4:US
 map -modes=n,v gz -ex :tabopen https://zmail.utdallas.edu/zimbra/
 map -count -modes=n,v K -builtin <count><C-S-Tab>
 map -count -modes=n,v p -builtin <count>fback1
