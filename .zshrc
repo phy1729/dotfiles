@@ -51,5 +51,5 @@ function cvrdc { ssh -fNML 122$(printf "%02d" $1):192.168.42.$1:3389 -S ~/.cvrdc
 function ssh-copy-id { cat ~/.ssh/id_dsa.pub | ssh $1 'cat >> ~/.ssh/authorized_keys'; }
 # map :h to opening vim's help in fullscreen
 alias :h='noglob :h-helper'
-function :h-helper () { vim +"h $1" +only; }
+function :h-helper () { vim +"h $1" +only +'nnoremap q :q!<CR>'; }
 function :BI () { vim -u NONE +'silent! source ~/.vimrc' +BundleInstall! +qa; }
