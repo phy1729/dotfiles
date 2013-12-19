@@ -1,4 +1,3 @@
-README.md skip
 .ssh recurse
 bin recurse
 .gitmodules skip
