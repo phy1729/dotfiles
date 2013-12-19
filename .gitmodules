@@ -1,0 +1,3 @@
+[submodule "rebase-master"]
+	path = rebase-master
+	url = https://github.com/phy1729/rebase-master.git
