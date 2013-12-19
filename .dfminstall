@@ -2,4 +2,5 @@ README.md skip
 .ssh recurse
 bin recurse
 .gitmodules skip
+dfm skip
 rebase-master skip
