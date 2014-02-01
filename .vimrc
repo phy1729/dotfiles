@@ -99,6 +99,8 @@ if has("autocmd")
 		autocmd BufWritePost *.sh silent !chmod +x %
 		autocmd BufWritePost *.pl silent !chmod +x %
 	endif
+
+	autocmd BufRead,BufNewFile Vagrantfile set filetype=ruby
 endif
 
 
