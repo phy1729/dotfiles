@@ -21,7 +21,6 @@ map -modes=n,v gw -ex :tabopen https://webmail.utdallas.edu/owa/
 map -modes=n,v gW -ex :tabopen http://www.weather.com/weather/hourbyhour/graph/Richardson+TX+75080:4:US
 map -modes=n,v gz -ex :tabopen https://zmail.utdallas.edu/zimbra/
 map -count -modes=n,v K -builtin <count><C-S-Tab>
-map -count -modes=n,v p -builtin <count>fback1
 map -count -modes=n,v J -builtin <count><C-Tab>
 map -count -modes=n,v V -builtin <C-v>n<C-v>m<C-v>vgT
 set defsearch=duckduckgo
