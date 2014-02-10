@@ -80,7 +80,7 @@ map n nzz
 " Diff mappings stolen from https://gist.github.com/qstrahl/6310563#file-diff-mappings-vim
 nno do :<C-U>exe 'diffget' v:count ? get(filter(tabpagebuflist(), 'getbufvar(bufname(v:val), "&diff")'), v:count) : '' '<Bar> diffupdate'<CR>
 nno dp :<C-U>exe 'diffput' v:count ? get(filter(tabpagebuflist(), 'getbufvar(bufname(v:val), "&diff")'), v:count) : '' '<Bar> diffupdate'<CR>
-nnoremap du :<C-U>diffupdate<CR>"" Override default diff normal commands to allow count specifying which
+nnoremap du :<C-U>diffupdate<CR>
 
 set background=dark
 set autoindent
