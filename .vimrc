@@ -145,6 +145,8 @@ if isdirectory(expand("~/.vim/bundle/vundle"))
 	vnoremap <leader>TM :Tabularize /\v(\&\|\\\\)<cr>
 	nnoremap <leader>T# :Tabularize /#<cr>
 	vnoremap <leader>T# :Tabularize /#<cr>
+	nnoremap <leader>T, :Tabularize /,<cr>
+	vnoremap <leader>T, :Tabularize /,<cr>
 
 	Bundle 'mattn/webapi-vim'
 	Bundle 'mattn/gist-vim'
