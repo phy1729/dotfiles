@@ -154,6 +154,9 @@ if isdirectory(expand("~/.vim/bundle/vundle"))
 	let g:gist_post_private = 1
 
 	Bundle 'dahu/LearnVim'
+
+	Bundle 'iptables'
+	autocmd BufReadPost *.rules se ft=iptables
 else
 	colorscheme desert
 endif
