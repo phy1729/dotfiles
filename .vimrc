@@ -58,12 +58,6 @@ nnoremap <leader>p :setlocal paste!<cr>
 " Spelling
 nnoremap <leader>ss :setlocal spell! spelllang=en_us<cr>:syntax sync fromstart<cr>
 
-" Window movement
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
-
 " For the all to often :Q typo
 com! -bang Q q<bang>
 " Fullscreen help
@@ -157,6 +151,8 @@ if isdirectory(expand("~/.vim/bundle/vundle"))
 
 	Bundle 'iptables'
 	autocmd BufReadPost *.rules se ft=iptables
+
+	Bundle 'christoomey/vim-tmux-navigator'
 else
 	colorscheme desert
 endif
