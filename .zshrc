@@ -46,7 +46,6 @@ function note { . ~/bin/scd; vim notes.tex; }
 function u { cd ~/.dotfiles; git pull; cd - 1>/dev/null; ~/bin/dfm install }
 function irc { ssh c.collegiumv.org -t tmux attach -d; }
 function cvtun { ssh -N phy1729@n.collegiumv.org -L 22$(printf "%02d" $1):192.168.42.$1:$2; }
-function cvssh { ssh -At phy1729@n.collegiumv.org ssh $1 }
 function cvrdc { ssh -fNML 122$(printf "%02d" $1):192.168.42.$1:3389 -S ~/.cvrdc:$1 phy1729@n.collegiumv.org; rdesktop -u phy1729 -d collegiumv.org -p - -f 127.0.0.1:122$(printf "%02d" $1); ssh -S ~/.cvrdc:$1 -O exit localhost; }
 function ssh-copy-id { cat ~/.ssh/id_dsa.pub | ssh $1 'cat >> ~/.ssh/authorized_keys'; }
 # map :h to opening vim's help in fullscreen
