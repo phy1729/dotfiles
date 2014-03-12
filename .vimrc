@@ -85,6 +85,7 @@ syntax on
 if has("autocmd")
 	" Jump to last-known-position when editing files
 	autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+	autocmd FileType gitcommit 0
 
 	" Credit: tpope
 	" Deletes swapfiles for unmodified buffers
