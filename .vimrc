@@ -154,6 +154,8 @@ if isdirectory(expand("~/.vim/bundle/vundle"))
 	autocmd BufReadPost *.rules se ft=iptables
 
 	Bundle 'christoomey/vim-tmux-navigator'
+
+	Bundle 'chase/vim-ansible-yaml'
 else
 	colorscheme desert
 endif
