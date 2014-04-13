@@ -1,16 +1,21 @@
+if [ $SSH_CLIENT ]; then
+	if which tmux 2>&1 >/dev/null; then
+		test -z "$TMUX" && (tmux attach || tmux new-session)
+	fi
+fi
+
 # set -o vi
 set -o noclobber
 
-alias odd='od -c -t x1'
 alias v='vim'
 alias c='ssh c'
+alias n='ssh n'
 
 case $(uname -s) in
 	Darwin)
-		alias ls='ls -AehlFWO'
+		alias ls='ls -AehlFGWO'
 		function brewup { brew update; brew upgrade; }
 		function note { . ~/bin/scd; vim notes.tex; }
-		function irc { ssh c.collegiumv.org -t tmux attach -d; }
 		;;
 	Linux)
 		alias ls='ls -AhlF --color'
@@ -19,14 +24,15 @@ case $(uname -s) in
 		;;
 	OpenBSD)
 		alias ls='ls -AhlF'
-		export PKG_PATH=ftp://filedump.se.rit.edu/pub/OpenBSD/$(uname -r)/packages/$(uname -p)/
+		export PKG_PATH=http://mirror.esc7.net/pub/OpenBSD/$(uname -r)/packages/$(uname -p)/
 		;;
 esac
 
 
-function u { cd ~/.dotfiles; git pull; cd - 1>/dev/null; }
-function cvtun { ssh -N phy1729@n.collegiumv.org -L 22`printf "%02d" $1`:192.168.42.$1:$2; }
-function ssh-copy-id { cat ~/.ssh/id_dsa.pub | ssh $1 'cat >> ~/.ssh/authorized_keys'; }
+function u { git --work-tree=$HOME/.dotfiles --git-dir=$HOME/.dotfiles/.git pull && ~/bin/dfm install }
+function cvtun { ssh -N phy1729@phalanx -L 22$(printf "%02d" $1):192.168.42.$1:$2; }
+function cvrdc { ssh -fNML 122$(printf "%02d" $1):192.168.42.$1:3389 -S ~/.cvrdc:$1 phy1729@n.collegiumv.org; rdesktop -u phy1729 -d collegiumv.org -p - -f 127.0.0.1:122$(printf "%02d" $1); ssh -S ~/.cvrdc:$1 -O exit localhost; }
 # map :h to opening vim's help in fullscreen
-function :h () { vim +"h $1" +only; }
+alias :h='noglob :h-helper'
+function :h-helper () { vim +"h" +"h $1" +only +'nnoremap q :q!<CR>'; }
 function :BI () { vim -u NONE +'silent! source ~/.vimrc' +BundleInstall! +qa; }
