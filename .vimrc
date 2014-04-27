@@ -124,8 +124,6 @@ if isdirectory(expand("~/.vim/bundle/vundle"))
 	" Unix nicities
 	Bundle 'tpope/vim-eunuch'
 
-	" Bundle 'ShowMarks'
-
 	Bundle 'michaeljsmith/vim-indent-object'
 
 	Bundle 'paradigm/TextObjectify'
