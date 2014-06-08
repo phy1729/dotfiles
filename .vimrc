@@ -54,8 +54,8 @@ if v:version > 703 || v:version == 703 && has("patch541")
 	set formatoptions+=j	" Make joining work properly
 end
 
-nnoremap <leader>t :w \| !pdflatex '%'<cr>
-nnoremap <leader>o :! xdg-open '%:r.pdf' > /dev/null &<cr><cr>
+nnoremap <leader>t :execute 'w \| !pdflatex '.shellescape(expand("%"))."\n"<cr>
+nnoremap <leader>o :execute '! xdg-open '.shellescape(expand("%:r")).'.pdf > /dev/null &'."\n"<cr><cr>
 nnoremap <leader>p :setlocal paste!<cr>
 
 " Spelling
