@@ -62,17 +62,17 @@ nnoremap <leader>p :setlocal paste!<cr>
 nnoremap <leader>ss :setlocal spell! spelllang=en_us<cr>:syntax sync fromstart<cr>
 
 " For the all to often :Q typo
-com! -bang Q q<bang>
+command! -bang Q q<bang>
 " Fullscreen help
-com! -narg=1 -complete=help H h <args> <bar> only
+command! -narg=1 -complete=help H h <args> <bar> only
 " Be consistent
 nnoremap Y y$
 " I want my tab complete
 nnoremap Q gQ
 
 "Center screen after searching
-map N Nzz
-map n nzz
+nnoremap N Nzz
+nnoremap n nzz
 
 " Diff mappings stolen from https://gist.github.com/qstrahl/6310563#file-diff-mappings-vim
 nno do :<C-U>exe 'diffget' v:count ? get(filter(tabpagebuflist(), 'getbufvar(bufname(v:val), "&diff")'), v:count) : '' '<Bar> diffupdate'<CR>
