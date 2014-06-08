@@ -34,6 +34,9 @@ set wildignore=*.swp,*.aux,*.pdf
 if exists("+wildignorecase")
 	set wildignorecase
 endif
+
+set laststatus=2
+set ruler
 set showcmd
 
 " Searching make it smart, incremental, and hilight
@@ -108,12 +111,6 @@ if isdirectory(expand("~/.vim/bundle/vundle"))
 	set rtp+=~/.vim/bundle/vundle/
 	call vundle#rc()
 	Bundle 'gmarik/vundle'
-
-	" Airline
-	Bundle 'bling/vim-airline'
-	set laststatus=2
-	let g:airline_left_sep = '▶'
-	let g:airline_right_sep = '◀'
 
 	" Colorscheme
 	Bundle 'altercation/vim-colors-solarized'
