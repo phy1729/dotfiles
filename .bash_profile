@@ -1,5 +1,3 @@
-if [ -r ~/.bashrc ]; then . ~/.bashrc; fi
-
 export PATH=$PATH:~/bin
 export EDITOR=vim
 
@@ -12,3 +10,5 @@ set completion-ignore-case On
 export HISTSIZE=1000000
 export HISTFILESIZE=1000000
 shopt -s histappend
+
+if [ -r ~/.bashrc ]; then . ~/.bashrc; fi
