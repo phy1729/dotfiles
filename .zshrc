@@ -45,7 +45,7 @@ case $(uname -s) in
 esac
 
 
-function u { git --work-tree=$HOME/.dotfiles --git-dir=$HOME/.dotfiles/.git pull && ~/bin/dfm install }
+function u { git --work-tree=$HOME/.dotfiles --git-dir=$HOME/.dotfiles/.git pull && ~/bin/dfm install; }
 function cvtun { ssh -N phy1729@phalanx -L 22$(printf "%02d" $1):192.168.42.$1:$2; }
 function cvrdc { ssh -fNML 122$(printf "%02d" $1):192.168.42.$1:3389 -S ~/.cvrdc:$1 phy1729@n.collegiumv.org; rdesktop -u phy1729 -d collegiumv.org -p - -f 127.0.0.1:122$(printf "%02d" $1); ssh -S ~/.cvrdc:$1 -O exit localhost; }
 # map :h to opening vim's help in fullscreen
