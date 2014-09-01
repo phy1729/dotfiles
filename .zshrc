@@ -51,4 +51,4 @@ function cvrdc { ssh -fNML 122$(printf "%02d" $1):192.168.42.$1:3389 -S ~/.cvrdc
 # map :h to opening vim's help in fullscreen
 alias :h='noglob :h-helper'
 function :h-helper () { vim +"h" +"h $1" +only +'nnoremap q :q!<CR>'; }
-function :BI () { vim -u NONE +'silent! source ~/.vimrc' +BundleInstall! +qa; }
+function :PU () { vim -u NONE +'silent! source ~/.vimrc' +PlugUpdate +qa; }
