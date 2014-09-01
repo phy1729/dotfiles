@@ -113,9 +113,8 @@ if isdirectory(expand("~/.vim/bundle/vundle"))
 	Bundle 'gmarik/vundle'
 
 	" Colorscheme
-	Bundle 'altercation/vim-colors-solarized'
-	let g:solarized_termcolors=256
-	colorscheme solarized
+	Plug 'romainl/flattened'
+	colorscheme flattened_dark
 	highlight Comment ctermfg=brown
 
 	" Unix nicities
