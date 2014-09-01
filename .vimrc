@@ -104,30 +104,22 @@ if has("autocmd")
 endif
 
 
-"Vundle
-if isdirectory(expand("~/.vim/bundle/vundle"))
-	" Standard Vundle stuff
-	filetype off
-	set rtp+=~/.vim/bundle/vundle/
-	call vundle#rc()
-	Bundle 'gmarik/vundle'
+"Plug
+if filereadable(expand("~/.vim/autoload/plug.vim"))
+	call plug#begin('~/.vim/plugged')
 
-	" Colorscheme
 	Plug 'romainl/flattened'
-	colorscheme flattened_dark
-	highlight Comment ctermfg=brown
 
-	" Unix nicities
-	Bundle 'tpope/vim-eunuch'
+	Plug 'tpope/vim-eunuch'
 
-	Bundle 'michaeljsmith/vim-indent-object'
+	Plug 'michaeljsmith/vim-indent-object'
 
-	Bundle 'paradigm/TextObjectify'
+	Plug 'paradigm/TextObjectify'
 
-	Bundle 'mbbill/undotree'
+	Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
 	nnoremap <leader>u :UndotreeToggle<cr>
 
-	Bundle 'godlygeek/tabular'
+	Plug 'godlygeek/tabular', { 'on': 'Tabularize' }
 	nnoremap <leader>Tm :Tabularize /&<cr>
 	vnoremap <leader>Tm :Tabularize /&<cr>
 	nnoremap <leader>TM :Tabularize /\v(\&\|\\\\)<cr>
@@ -137,22 +129,25 @@ if isdirectory(expand("~/.vim/bundle/vundle"))
 	nnoremap <leader>T, :Tabularize /,<cr>
 	vnoremap <leader>T, :Tabularize /,<cr>
 
-	Bundle 'mattn/webapi-vim'
-	Bundle 'mattn/gist-vim'
+	Plug 'mattn/webapi-vim'
+	Plug 'mattn/gist-vim'
 	let g:gist_clip_command = 'pbcopy'
 	let g:gist_post_private = 1
 
-	Bundle 'iptables'
+	Plug 'iptables', { 'for': 'iptables' }
 	autocmd BufReadPost *.rules se ft=iptables
 
-	Bundle 'christoomey/vim-tmux-navigator'
+	Plug 'christoomey/vim-tmux-navigator'
 
-	Bundle 'chase/vim-ansible-yaml'
+	Plug 'chase/vim-ansible-yaml'
+
+	call plug#end()
+	colorscheme flattened_dark
+	highlight Comment ctermfg=brown
 else
 	colorscheme desert
 endif
 filetype plugin indent on
-" end Vundle
 
 " Credit: http://vimcasts.org/episodes/tidying-whitespace/
 function! Preserve(command)
