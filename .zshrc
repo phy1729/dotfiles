@@ -15,7 +15,7 @@ bindkey -e
 autoload -Uz compinit
 compinit
 
-setopt correctall histignorespace ignoreeof noclobber automenu
+setopt correctall histignorespace ignoreeof noclobber automenu cbases
 compctl -g '*.tex' +  vim
 fignore=( .aux .pdf )
 setopt autopushd pushdminus pushdsilent pushdtohome
