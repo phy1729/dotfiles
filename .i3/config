@@ -140,5 +140,3 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
-
-exec xautolock -time 5 -locker 'i3lock -n -c 000000' -corners +0-- -cornerdelay 1 -cornerredelay 20
