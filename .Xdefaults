@@ -1,5 +1,8 @@
-XTerm.vt100.background:black
-XTerm.vt100.foreground:white
-XTerm.vt100.scrollBar:false
-XTerm.vt100.rightScrollBar:true
-XTerm.vt100.saveLines:200
+XTerm.vt100.background: black
+XTerm.vt100.foreground: white
+XTerm.vt100.scrollBar: false
+XTerm.vt100.rightScrollBar: true
+XTerm.vt100.saveLines: 500
+XTerm.vt100.jumpScroll: true
+XTerm.vt100.metaSendsEscape: true
+XTerm.vt100.locale: utf8
