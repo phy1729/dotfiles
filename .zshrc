@@ -29,17 +29,17 @@ alias n='ssh n'
 
 case $(uname -s) in
 	Darwin)
-		alias ls='ls -AehlFGWO'
+		alias ls='ls -ehlFGWO'
 		function brewup { brew update; brew upgrade; }
 		function note { . ~/bin/scd; vim notes.tex; }
 		;;
 	Linux)
-		alias ls='ls -AhlF --color'
+		alias ls='ls -hlF --color'
 		function say { mplayer -really-quiet "http://translate.google.com/translate_tts?tl=en&q=$1"; }
 		function playdir { mplayer -shuffle -playlist <(find -L "$(pwd)" -type f); }
 		;;
 	OpenBSD)
-		alias ls='ls -AhlF'
+		alias ls='ls -hlF'
 		export PKG_PATH=http://mirror.esc7.net/pub/OpenBSD/$(uname -r)/packages/$(uname -p)/
 		;;
 esac
