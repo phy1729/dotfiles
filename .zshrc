@@ -27,6 +27,10 @@ alias v='vim'
 alias c='ssh c'
 alias n='ssh n'
 
+alias -s pdf='(){ xpdf "$@" >& /dev/null &| }'
+alias -s tex='vim'
+alias -s txt='vim'
+
 case $(uname -s) in
 	Darwin)
 		alias ls='ls -ehlFGWO'
