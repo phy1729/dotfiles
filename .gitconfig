@@ -8,7 +8,7 @@
 [github]
 	user = phy1729
 [push]
-	default = current
+	default = upstream
 [color]
 	ui = true
 [alias]
