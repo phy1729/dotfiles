@@ -57,3 +57,4 @@ function cvrdc { ssh -fNML 122$(printf "%02d" $1):192.168.42.$1:3389 -S ~/.cvrdc
 alias :h='noglob :h-helper'
 function :h-helper () { vim +"h" +"h $1" +only +'nnoremap q :q!<CR>'; }
 function :PU () { vim -u NONE +'silent! source ~/.vimrc' +PlugUpdate +qa; }
+function hgrep { repeat $1; do read -r; print -r $REPLY; done; grep "${@:2}"; }
