@@ -44,7 +44,7 @@ case $(uname -s) in
 		;;
 	OpenBSD)
 		alias ls='ls -hlF'
-		export PKG_PATH=http://mirror.esc7.net/pub/OpenBSD/$(uname -r)/packages/$(uname -p)/
+		export PKG_PATH=http://mirror.esc7.net/pub/OpenBSD/snapshots/packages/$(uname -p)/
 		;;
 esac
 
