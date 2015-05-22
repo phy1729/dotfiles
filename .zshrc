@@ -27,7 +27,7 @@ alias v='vim'
 alias c='ssh c'
 alias n='ssh n'
 
-alias -s pdf='(){ xpdf "$@" >& /dev/null &| }'
+alias -s pdf='(){ mupdf "$@" >& /dev/null &| exit }'
 alias -s tex='vim'
 alias -s txt='vim'
 
