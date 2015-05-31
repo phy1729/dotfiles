@@ -13,6 +13,8 @@
 	ui = true
 [alias]
 	br = branch
+	cm = commit
+	cmm = commit --no-edit
 	co = checkout
 	fe = fetch --all -p
 	fixup = commit --amend -C HEAD
