@@ -26,6 +26,7 @@ PROMPT="%n@%m:%~%(?,,%F{red})%#%f "
 alias v='vim'
 alias c='ssh c'
 alias n='ssh n'
+alias cvsup='sudo cvs -q up -Pd'
 
 alias -s pdf='(){ mupdf "$@" >& /dev/null &| exit }'
 alias -s tex='vim'
