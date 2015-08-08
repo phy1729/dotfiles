@@ -7,4 +7,4 @@ if [ $(uname -s) = 'Darwin' ]; then
 	export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 fi
 
-eval $(ssh-agent -s)
+[ -z "$SSH_CLIENT" ] && eval $(ssh-agent -s)
