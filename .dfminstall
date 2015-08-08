@@ -1,5 +1,6 @@
 .ssh recurse
 bin recurse
 .gitmodules skip
+.weechat recurse
 dfm skip
 rebase-master skip
