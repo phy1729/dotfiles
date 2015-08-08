@@ -101,6 +101,9 @@ if has("autocmd")
 	endif
 
 	autocmd BufRead,BufNewFile Vagrantfile set filetype=ruby
+
+	autocmd Filetype gitcommit,mail set cc=72
+	autocmd Filetype ldif set cc=79
 endif
 
 
