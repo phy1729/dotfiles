@@ -54,7 +54,7 @@ function u { (cd $HOME/.dotfiles && git pull && git submodule update && ~/bin/df
 function x { (cd && startx >|~/.xlog 2>&1 &) && clear && lock -np }
 function cvtun { ssh -N phy1729@phalanx -L 22$(printf "%02d" $1):192.168.42.$1:$2; }
 function cvrdc { ssh -fNML 122$(printf "%02d" $1):192.168.42.$1:3389 -S ~/.cvrdc:$1 phy1729@n.collegiumv.org; rdesktop -u phy1729 -d collegiumv.org -p - -f 127.0.0.1:122$(printf "%02d" $1); ssh -S ~/.cvrdc:$1 -O exit localhost; }
-function getsets { rm -rf $HOME/,sets && mkdir $HOME/,sets && for i in base comp game man xbase xfont xserv xshare; do ftp -o "$HOME/,sets/${i}57.tgz" http://mirror.esc7.net/pub/OpenBSD/snapshots/amd64/"${i}57.tgz" >/dev/null 2>&1 &; done && for i in bsd bsd.mp bsd.rd INSTALL.amd64 SHA256.sig; do ftp -o "$HOME/,sets/$i" "http://mirror.esc7.net/pub/OpenBSD/snapshots/amd64/$i" >/dev/null 2>&1 &; done }
+function getsets { rm -rf $HOME/,sets && mkdir $HOME/,sets && for i in base comp game man xbase xfont xserv xshare; do ftp -o "$HOME/,sets/${i}58.tgz" http://mirror.esc7.net/pub/OpenBSD/snapshots/amd64/"${i}58.tgz" >/dev/null 2>&1 &; done && for i in bsd bsd.mp bsd.rd INSTALL.amd64 SHA256.sig; do ftp -o "$HOME/,sets/$i" "http://mirror.esc7.net/pub/OpenBSD/snapshots/amd64/$i" >/dev/null 2>&1 &; done }
 # map :h to opening vim's help in fullscreen
 alias :h='noglob :h-helper'
 function :h-helper () { vim +"h" +"h $1" +only +'nnoremap q :q!<CR>'; }
