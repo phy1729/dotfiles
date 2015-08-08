@@ -134,8 +134,10 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
 
 	Plug 'mattn/webapi-vim'
 	Plug 'mattn/gist-vim'
-	let g:gist_clip_command = 'pbcopy'
 	let g:gist_post_private = 1
+	if executable('pbcopy')
+		let g:gist_clip_command = 'pbcopy'
+	endif
 
 	Plug 'iptables', { 'for': 'iptables' }
 	autocmd BufReadPost *.rules se ft=iptables
