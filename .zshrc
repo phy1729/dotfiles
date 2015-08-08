@@ -21,7 +21,7 @@ fignore=( .aux .pdf )
 setopt autopushd pushdminus pushdsilent pushdtohome
 DIRSTACKSIZE=8
 
-export PROMPT="%n@%m:%~%(?,,%F{red})%#%f "
+PROMPT="%n@%m:%~%(?,,%F{red})%#%f "
 
 alias v='vim'
 alias c='ssh c'
