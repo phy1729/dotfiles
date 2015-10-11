@@ -1,8 +1,5 @@
-if [ -n "$SSH_CLIENT" ]; then
-	if which tmux 2>&1 >/dev/null; then
-		test -z "$TMUX" && (tmux attach || tmux new-session)
-	fi
-fi
+[ -n "$SSH_CLIENT" -a -z "$TMUX" ] && whence tmux >/dev/null &&
+	{ tmux attach || tmux new-session }
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
