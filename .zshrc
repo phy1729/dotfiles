@@ -29,7 +29,7 @@ alias -s pdf='(){ mupdf "$@" >& /dev/null &| exit }'
 alias -s tex='vim'
 alias -s txt='vim'
 
-case $(uname -s) in
+case "$(uname -s)" in
 	Darwin)
 		alias ls='ls -ehlFGWO'
 		function brewup { brew update; brew upgrade; }

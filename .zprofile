@@ -3,8 +3,8 @@ export EDITOR=vim
 export LESS=-ir
 export PATH=$PATH:~/bin
 
-if [ $(uname -s) = 'Darwin' ]; then
-	export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+if [ "$(uname -s)" = 'Darwin' ]; then
+	export PATH=/usr/local/bin:/usr/local/sbin:"$PATH"
 fi
 
-[ -z "$SSH_CLIENT" ] && eval $(ssh-agent -s)
+[ -z "$SSH_CLIENT" ] && eval "$(ssh-agent -s)"
