@@ -40,17 +40,9 @@ alias -s tex='vim'
 alias -s txt='vim'
 
 case "$(uname -s)" in
-	Darwin)
-		alias ls='ls -ehlFGWO'
-		function brewup { brew update; brew upgrade; }
-		;;
-	Linux)
-		alias ls='ls -hlF --color'
-		;;
-	OpenBSD)
-		alias ls='ls -hlF'
-		export PKG_PATH=http://mirror.esc7.net/pub/OpenBSD/snapshots/packages/$(uname -p)/
-		;;
+	Darwin) alias ls='ls -ehlFGWO' ;;
+	Linux) alias ls='ls -hlF --color' ;;
+	OpenBSD) alias ls='ls -hlF' ;;
 esac
 
 
