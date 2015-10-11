@@ -6,7 +6,7 @@ FPATH="$HOME/.zshcomp:$FPATH"
 HISTFILE=~/.histfile
 HISTSIZE=1000
 PROMPT="%n@%m:%~%(?,,%F{red})%#%f "
-SAVEHIST=10000
+SAVEHIST=100000
 
 bindkey -e
 
