@@ -1,16 +1,3 @@
-[user]
-	email = phy1729@gmail.com
-	name = Matthew Martin
-[core]
-	editor = vim
-[merge]
-	tool = vimdiff
-[github]
-	user = phy1729
-[push]
-	default = upstream
-[color]
-	ui = true
 [alias]
 	br = branch
 	cm = commit
@@ -26,5 +13,18 @@
 	review = diff --staged
 	save = commit -m'savepoint'
 	st = status -sb
+[color]
+	ui = true
+[core]
+	editor = vim
+[github]
+	user = phy1729
+[merge]
+	tool = vimdiff
+[push]
+	default = upstream
 [rerere]
 	enabled = true
+[user]
+	email = phy1729@gmail.com
+	name = Matthew Martin
