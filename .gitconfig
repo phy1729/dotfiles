@@ -7,7 +7,7 @@
 	fixup = commit --amend -C HEAD
 	lg = log --color --graph --pretty=colorful-oneline --abbrev-commit
 	lga = log --color --graph --pretty=colorful-oneline --abbrev-commit --all
-	ll = !git log --color --graph --pretty=colorful-oneline --abbrev-commit --all --since=\"$(git show -s --pretty=format:'%cd' master~3)\"
+	ll = ![ $(git log --all --max-count=5 --oneline | wc -l) -ge 3 ] && git log --color --graph --pretty=colorful-oneline --abbrev-commit --all --since=\"$(git show -s --pretty=format:'%cd' master~3)\" || git lga
 	pop = stash pop
 	rev = diff --staged -M
 	review = diff --staged
