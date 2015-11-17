@@ -1,6 +1,7 @@
-.ssh recurse
-bin recurse
 .gitmodules skip
+.ssh recurse
 .weechat recurse
+LICENSE skip
+bin recurse
 dfm skip
 rebase-master skip
