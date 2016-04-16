@@ -32,7 +32,6 @@ fignore=( .aux .pdf )
 
 alias c='ssh c'
 alias cvsup='sudo cvs -q up -Pd'
-alias n='ssh n'
 alias v='vim'
 
 alias -s pdf='(){ mupdf "$@" >& /dev/null &| exit }'
