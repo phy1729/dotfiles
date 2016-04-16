@@ -30,7 +30,7 @@ compctl -g '*.tex' +  vim
 fignore=( .aux .pdf )
 
 alias c='LC_ALL=en_US.UTF-8 mosh c'
-alias cvsup='sudo cvs -q up -Pd'
+alias cvsup='cvs -q up -Pd'
 alias v='vim'
 
 alias -s pdf='(){ mupdf "$@" >& /dev/null &| exit }'
