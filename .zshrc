@@ -26,8 +26,6 @@ setopt appendhistory \
 
 autoload -Uz compinit
 compinit
-compctl -g '*.tex' +  vim
-fignore=( .aux .pdf )
 
 alias c='LC_ALL=en_US.UTF-8 mosh c'
 alias cvsup='cvs -q up -Pd'
@@ -35,8 +33,6 @@ alias ls='ls -hlF'
 alias v='vim'
 
 alias -s pdf='(){ mupdf "$@" >& /dev/null &| exit }'
-alias -s tex='vim'
-alias -s txt='vim'
 
 
 # map :h to opening vim's help in fullscreen
