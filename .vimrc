@@ -111,7 +111,7 @@ endif
 if filereadable(expand("~/.vim/autoload/plug.vim"))
 	call plug#begin('~/.vim/plugged')
 
-	Plug 'romainl/flattened'
+	Plug 'robertmeta/nofrils'
 
 	Plug 'tpope/vim-eunuch'
 
@@ -147,8 +147,7 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
 	Plug 'chase/vim-ansible-yaml'
 
 	call plug#end()
-	colorscheme flattened_dark
-	highlight Comment ctermfg=brown
+	colorscheme nofrils-dark
 else
 	colorscheme desert
 endif
