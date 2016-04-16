@@ -30,7 +30,8 @@ compinit
 alias c='LC_ALL=en_US.UTF-8 mosh c'
 alias cvsup='cvs -q up -Pd'
 alias ls='ls -hlF'
-alias v='vim'
+alias pl='print -rl --'
+alias v=vim
 
 alias -s pdf='(){ mupdf "$@" >& /dev/null &| exit }'
 
