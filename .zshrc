@@ -33,6 +33,8 @@ alias ls='ls -hlF'
 alias pl='print -rl --'
 alias v=vim
 
+alias -s mp{3,4}=mplayer
+alias -s ogg=mplayer
 alias -s pdf='(){ mupdf "$@" >& /dev/null &| exit }'
 
 
