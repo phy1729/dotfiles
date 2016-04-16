@@ -6,8 +6,8 @@
 	fe = fetch --all -p
 	fixup = commit --amend -C HEAD
 	lg = log --color --graph --pretty=colorful-oneline --abbrev-commit
-	lga = log --color --graph --pretty=colorful-oneline --abbrev-commit --all
-	ll = !git log --color --graph --pretty=colorful-oneline --abbrev-commit --all --since=\"$(git show -s --pretty=format:'%cd' master~3)\"
+	lga = !git --no-replace-objects log --color --graph --pretty=colorful-oneline --abbrev-commit --all
+	ll = !git  --no-replace-objects log --color --graph --pretty=colorful-oneline --abbrev-commit --all --since=\"$(git show -s --pretty=format:'%cd' master~3)\"
 	pop = stash pop
 	rev = diff --staged -M
 	review = diff --staged
