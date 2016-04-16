@@ -15,7 +15,6 @@ setopt appendhistory \
        autopushd \
        beep \
        cbases \
-       correctall \
        extendedglob \
        histignorespace \
        ignoreeof \
