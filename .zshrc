@@ -5,7 +5,7 @@ DIRSTACKSIZE=8
 FPATH="$HOME/.zshcomp:$FPATH"
 HISTFILE=~/.histfile
 HISTSIZE=1000
-PROMPT="%n@%m:%~%(?,,%F{red})%#%f "
+PROMPT="%m:%~%(?,,%F{red})%#%f "
 SAVEHIST=100000
 
 bindkey -e
