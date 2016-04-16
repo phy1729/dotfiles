@@ -2,7 +2,7 @@ export CVSROOT=anoncvs@anoncvs.obsd.esc7.net:/cvs
 export EDITOR=vim
 export LESS=-XFcir
 export PAGER=less
-path+=(~/bin)
+path+=(~/bin ~/.cabal/bin)
 
 if [ "$(uname -s)" = 'Darwin' ]; then
 	export PATH=/usr/local/bin:/usr/local/sbin:"$PATH"
