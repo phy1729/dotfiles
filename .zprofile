@@ -1,6 +1,6 @@
 export CVSROOT=anoncvs@anoncvs.obsd.esc7.net:/cvs
 export EDITOR=vim
-export LESS=-ir
+export LESS=-XFcir
 export PAGER=less
 path+=(~/bin)
 
