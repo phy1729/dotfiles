@@ -29,7 +29,7 @@ compinit
 compctl -g '*.tex' +  vim
 fignore=( .aux .pdf )
 
-alias c='ssh c'
+alias c='LC_ALL=en_US.UTF-8 mosh c'
 alias cvsup='sudo cvs -q up -Pd'
 alias v='vim'
 
