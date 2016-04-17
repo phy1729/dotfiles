@@ -142,8 +142,6 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
 	Plug 'iptables', { 'for': 'iptables' }
 	autocmd BufReadPost *.rules se ft=iptables
 
-	Plug 'christoomey/vim-tmux-navigator'
-
 	Plug 'chase/vim-ansible-yaml'
 
 	call plug#end()
