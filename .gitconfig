@@ -18,6 +18,7 @@
 	ui = true
 [core]
 	editor = vim
+	excludesFile = ~/.gitignore
 [github]
 	user = phy1729
 [merge]
