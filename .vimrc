@@ -123,14 +123,8 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
 	nnoremap <leader>u :UndotreeToggle<cr>
 
 	Plug 'godlygeek/tabular', { 'on': 'Tabularize' }
-	nnoremap <leader>Tm :Tabularize /&<cr>
-	vnoremap <leader>Tm :Tabularize /&<cr>
-	nnoremap <leader>TM :Tabularize /\v(\&\|\\\\)<cr>
-	vnoremap <leader>TM :Tabularize /\v(\&\|\\\\)<cr>
-	nnoremap <leader>T# :Tabularize /#<cr>
-	vnoremap <leader>T# :Tabularize /#<cr>
-	nnoremap <leader>T, :Tabularize /,<cr>
-	vnoremap <leader>T, :Tabularize /,<cr>
+	noremap <leader>T# :Tabularize /#<cr>
+	noremap <leader>T, :Tabularize /,<cr>
 
 	Plug 'mattn/webapi-vim'
 	Plug 'mattn/gist-vim'
