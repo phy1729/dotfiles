@@ -85,6 +85,8 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
 	colorscheme nofrils-dark
 endif
 
+let g:is_posix=1
+
 " Credit: http://vimcasts.org/episodes/tidying-whitespace/
 function! Preserve(command)
 	let _s=@/
