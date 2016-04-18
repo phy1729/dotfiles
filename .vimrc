@@ -34,17 +34,10 @@ if !isdirectory(expand("~/.vim/undodir"))
 	call mkdir(expand("~/.vim/undodir"),"p",0700)
 end
 
-nnoremap <leader>t :execute 'w \| !pdflatex '.shellescape(expand("%"))."\n"<cr>
-nnoremap <leader>o :execute '! xdg-open '.shellescape(expand("%:r")).'.pdf > /dev/null &'."\n"<cr><cr>
-nnoremap <leader>p :setlocal paste!<cr>
-
-" Spelling
-nnoremap <leader>ss :setlocal spell! spelllang=en_us<cr>:syntax sync fromstart<cr>
+nnoremap <leader>s :setlocal spell! spelllang=en_us<cr>
 
 " For the all to often :Q typo
 command! -bang Q q<bang>
-" Fullscreen help
-command! -narg=1 -complete=help H h <args> <bar> only
 " Be consistent
 nnoremap Y y$
 " I want my tab complete
@@ -55,8 +48,6 @@ nnoremap N Nzz
 nnoremap n nzz
 
 " Diff mappings stolen from https://gist.github.com/qstrahl/6310563#file-diff-mappings-vim
-nno do :<C-U>exe 'diffget' v:count ? get(filter(tabpagebuflist(), 'getbufvar(bufname(v:val), "&diff")'), v:count) : '' '<Bar> diffupdate'<CR>
-nno dp :<C-U>exe 'diffput' v:count ? get(filter(tabpagebuflist(), 'getbufvar(bufname(v:val), "&diff")'), v:count) : '' '<Bar> diffupdate'<CR>
 nnoremap du :<C-U>diffupdate<CR>
 nnoremap dm :if &diff<Bar>diffoff<Bar>else<Bar>diffthis<Bar>endif<CR>
 nnoremap dq :<C-U>diffoff!<CR>
