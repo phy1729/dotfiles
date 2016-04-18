@@ -84,7 +84,6 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
 	call plug#end()
 	colorscheme nofrils-dark
 endif
-filetype plugin indent on
 
 " Credit: http://vimcasts.org/episodes/tidying-whitespace/
 function! Preserve(command)
