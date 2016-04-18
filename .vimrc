@@ -36,21 +36,18 @@ end
 
 nnoremap <leader>s :setlocal spell! spelllang=en_us<cr>
 
-" For the all to often :Q typo
-command! -bang Q q<bang>
-" Be consistent
-nnoremap Y y$
-" I want my tab complete
-nnoremap Q gQ
+nnoremap dm :<C-u>set diff!<CR>
+nnoremap dq :<C-U>diffoff!<CR>
+nnoremap du :<C-U>diffupdate<CR>
 
-"Center screen after searching
+" Center screen after searching
 nnoremap N Nzz
 nnoremap n nzz
 
-" Diff mappings stolen from https://gist.github.com/qstrahl/6310563#file-diff-mappings-vim
-nnoremap du :<C-U>diffupdate<CR>
-nnoremap dm :if &diff<Bar>diffoff<Bar>else<Bar>diffthis<Bar>endif<CR>
-nnoremap dq :<C-U>diffoff!<CR>
+nnoremap Q gQ
+nnoremap Y y$
+
+command! -bang Q q<bang>
 
 if has("autocmd")
 	" Jump to last-known-position when editing files
