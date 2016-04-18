@@ -1,57 +1,37 @@
-set nocompatible
-set history=1000
-set undolevels=1000
-set title
-set lazyredraw
+set autoindent
+set background=dark
+set backspace=2
+set backupdir=~/tmp,/tmp,/var/tmp
+set encoding=utf-8
+set formatoptions=1jqort
 set hidden
-
-set backupdir=~/tmp,/tmp,/var/tmp,$HOME/Local\ Settings/Temp
-if v:version >702
-	set undofile
-	set undodir=~/.vim/undodir
-	if ! isdirectory(expand("~/.vim/undodir"))
-		call mkdir(expand("~/.vim/undodir"),"p",0700)
-	end
-end
-
-" Don't beep
-set visualbell
-set noerrorbells
-
-" Get out of insert mode faster
+set history=1000
+set hlsearch
+set ignorecase
+set incsearch
+set laststatus=2
+set lazyredraw
+set linebreak
+set nomodeline
+set number
+set ruler
+set scrolloff=4
+set showcmd
+set smartcase
 set notimeout
 set ttimeout
 set ttimeoutlen=50
-
-set backspace=2
-set encoding=utf-8
-set nomodeline		" For security
-set autoread
-
+set undodir=~/.vim/undodir
+set undofile
+set undolevels=1000
+set visualbell
+set wildignore=*.swp
+set wildignorecase
 set wildmenu
 set wildmode=longest:full,full
-set wildignore=*.swp,*.aux,*.pdf
-if exists("+wildignorecase")
-	set wildignorecase
-endif
 
-set laststatus=2
-set ruler
-set showcmd
-
-" Searching make it smart, incremental, and hilight
-set ignorecase
-set smartcase
-set incsearch
-set hlsearch
-set magic
-
-set number
-set scrolloff=4
-set linebreak
-set formatoptions=rol1	" Make comments and word wrapping work properly
-if v:version > 703 || v:version == 703 && has("patch541")
-	set formatoptions+=j	" Make joining work properly
+if !isdirectory(expand("~/.vim/undodir"))
+	call mkdir(expand("~/.vim/undodir"),"p",0700)
 end
 
 nnoremap <leader>t :execute 'w \| !pdflatex '.shellescape(expand("%"))."\n"<cr>
@@ -80,10 +60,6 @@ nno dp :<C-U>exe 'diffput' v:count ? get(filter(tabpagebuflist(), 'getbufvar(buf
 nnoremap du :<C-U>diffupdate<CR>
 nnoremap dm :if &diff<Bar>diffoff<Bar>else<Bar>diffthis<Bar>endif<CR>
 nnoremap dq :<C-U>diffoff!<CR>
-
-set background=dark
-set autoindent
-syntax on
 
 if has("autocmd")
 	" Jump to last-known-position when editing files
