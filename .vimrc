@@ -69,10 +69,6 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
 
 	Plug 'tpope/vim-eunuch'
 
-	Plug 'michaeljsmith/vim-indent-object'
-
-	Plug 'paradigm/TextObjectify'
-
 	Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
 	nnoremap <leader>u :UndotreeToggle<cr>
 
@@ -86,9 +82,6 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
 	if executable('pbcopy')
 		let g:gist_clip_command = 'pbcopy'
 	endif
-
-	Plug 'iptables', { 'for': 'iptables' }
-	autocmd BufReadPost *.rules se ft=iptables
 
 	Plug 'chase/vim-ansible-yaml'
 
