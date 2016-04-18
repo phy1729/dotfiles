@@ -49,27 +49,17 @@ nnoremap Y y$
 
 command! -bang Q q<bang>
 
-if has("autocmd")
-	" Jump to last-known-position when editing files
-	autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-	autocmd FileType gitcommit 0
+" Jump to last-known-position when editing files
+autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+autocmd FileType gitcommit 0
 
-	" Credit: tpope
-	" Deletes swapfiles for unmodified buffers
-	autocmd CursorHold,BufWritePost,BufReadPost,BufLeave * if !$VIMSWAP && isdirectory(expand("<amatch>:h")) | let &swapfile = &modified | endif
+" Credit: tpope
+" Deletes swapfiles for unmodified buffers
+autocmd CursorHold,BufWritePost,BufReadPost,BufLeave * if isdirectory(expand("<amatch>:h")) | let &swapfile = &modified | endif
 
-	" Makes .sh and .pl files executable
-	if has ("unix")
-		autocmd BufWritePost *.sh silent !chmod +x %
-		autocmd BufWritePost *.pl silent !chmod +x %
-	endif
-
-	autocmd BufRead,BufNewFile Vagrantfile set filetype=ruby
-
-	autocmd Filetype gitcommit,mail set cc=72
-	autocmd Filetype ldif set cc=79
-endif
-
+autocmd Filetype gitcommit,mail set cc=72
+autocmd Filetype ldif set cc=79
+autocmd Filetype sh autocmd BufWritePost * silent !chmod +x %
 
 "Plug
 if filereadable(expand("~/.vim/autoload/plug.vim"))
