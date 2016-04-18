@@ -79,9 +79,6 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
 	Plug 'mattn/webapi-vim', { 'on': 'Gist' }
 	Plug 'mattn/gist-vim', { 'on': 'Gist' }
 	let g:gist_post_private = 1
-	if executable('pbcopy')
-		let g:gist_clip_command = 'pbcopy'
-	endif
 
 	Plug 'chase/vim-ansible-yaml', { 'for': 'ansible' }
 
