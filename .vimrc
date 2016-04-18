@@ -84,8 +84,6 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
 
 	call plug#end()
 	colorscheme nofrils-dark
-else
-	colorscheme desert
 endif
 filetype plugin indent on
 
