@@ -25,7 +25,7 @@
 [merge]
 	tool = vimdiff
 [pretty]
-	colorful-oneline = format:%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset
+	colorful-oneline = format:%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset
 [push]
 	default = upstream
 [rerere]
