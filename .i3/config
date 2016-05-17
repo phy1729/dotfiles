@@ -141,6 +141,6 @@ bar {
         status_command i3status
 }
 
-assign [class="firefox"] 2
+assign [class="chromium-browser"] 2
 
-exec --no-startup-id i3-msg 'workspace 1; exec xterm "LC_ALL=en_US.UTF-8 mosh c"; workspace 2; exec firefox; workspace 1'
+exec --no-startup-id i3-msg 'workspace 1; exec xterm -e "mosh c"; exec chrome;'
