@@ -5,8 +5,4 @@ export LESS=-XFcir
 export PAGER=less
 path+=(~/bin ~/.cabal/bin)
 
-if [ "$(uname -s)" = 'Darwin' ]; then
-	export PATH=/usr/local/bin:/usr/local/sbin:"$PATH"
-fi
-
-[ -z "$SSH_CLIENT" ] && eval "$(ssh-agent -s)"
+[[ -z $SSH_CLIENT && $OSTYPE != darwin* ]] && eval "$(ssh-agent -s)"
