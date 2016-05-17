@@ -27,7 +27,7 @@ setopt appendhistory \
 autoload -Uz compinit
 compinit
 
-alias c='LC_ALL=en_US.UTF-8 mosh c'
+alias c='mosh c'
 alias cvsup='cvs -q up -Pd'
 alias ls='ls -hlF'
 alias pl='print -rl --'
