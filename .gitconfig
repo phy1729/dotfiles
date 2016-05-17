@@ -4,7 +4,7 @@
 	cm = commit
 	cmm = commit --no-edit
 	co = checkout
-	fe = fetch --all -p
+	fe = fetch --all -p --tags
 	fixup = commit --amend -C HEAD
 	fu = fetch upstream
 	lg = log --color --graph --pretty=colorful-oneline --abbrev-commit
