@@ -11,4 +11,5 @@ XTerm.vt100.rightScrollBar: true
 XTerm.vt100.saveLines: 5000
 XTerm.vt100.scrollBar: false
 XTerm.VT100*translations: #override \n\
-	Shift <Btn1Up>: exec-formatted("xdg-open '%t'", SELECT)
+	Shift <Btn1Up>: exec-formatted("xdg-open '%t'", SELECT) \n\
+	<Key>XF86Calculator: secure()
