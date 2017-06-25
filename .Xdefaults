@@ -5,5 +5,5 @@ XTerm.vt100.jumpScroll: true
 XTerm.vt100.locale: utf8
 XTerm.vt100.metaSendsEscape: true
 XTerm.vt100.rightScrollBar: true
-XTerm.vt100.saveLines: 500
+XTerm.vt100.saveLines: 5000
 XTerm.vt100.scrollBar: false
