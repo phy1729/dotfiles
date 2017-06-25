@@ -1,7 +1,7 @@
 export CVSROOT=anoncvs@anoncvs2.usa.openbsd.org:/cvs
 export EDITOR=vim
 export LANG=en_US.UTF-8
-export LESS=-XFcir
+export LESS=-cFiRX
 export PAGER=less
 path+=(~/bin)
 
