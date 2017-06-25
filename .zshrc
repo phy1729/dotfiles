@@ -1,7 +1,6 @@
 [ -n "$SSH_CLIENT" -a -z "$TMUX" ] && whence tmux >/dev/null &&
 	{ tmux attach || tmux new-session }
 
-DIRSTACKSIZE=8
 FPATH="$HOME/.zshcomp:$FPATH"
 HISTFILE=~/.histfile
 HISTSIZE=1000
@@ -10,19 +9,12 @@ SAVEHIST=100000
 
 bindkey -e
 
-setopt appendhistory \
-       automenu \
-       autopushd \
-       beep \
+setopt \
        cbases \
-       extendedglob \
-       histignorespace \
-       ignoreeof \
        noclobber \
-       nomatch \
-       pushdminus \
-       pushdsilent \
-       pushdtohome
+       extendedglob \
+       histignorealldups \
+       histignorespace
 
 autoload -Uz compinit
 compinit
