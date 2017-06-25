@@ -10,6 +10,7 @@
 	lg = log --color --graph --pretty=colorful-oneline --abbrev-commit
 	lga = !git --no-replace-objects log --color --graph --pretty=colorful-oneline --abbrev-commit --all
 	ll = !git  --no-replace-objects log --color --graph --pretty=colorful-oneline --abbrev-commit --all --since=\"$(git show -s --pretty=format:'%cd' master~3)\"
+	paf = push --all -f
 	pop = stash pop
 	rev = diff --staged -M
 	review = diff --staged
