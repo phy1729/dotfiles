@@ -1,4 +1,4 @@
-export CVSROOT=anoncvs@anoncvs.obsd.esc7.net:/cvs
+export CVSROOT=anoncvs@anoncvs2.usa.openbsd.org:/cvs
 export EDITOR=vim
 export LANG=en_US.UTF-8
 export LESS=-XFcir
