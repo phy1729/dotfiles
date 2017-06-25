@@ -4,6 +4,11 @@ XTerm.vt100.foreground: white
 XTerm.vt100.jumpScroll: true
 XTerm.vt100.locale: utf8
 XTerm.vt100.metaSendsEscape: true
+XTerm.vt100.on3Clicks: regex https?://[^ /]+(/[^ ]*[^ ,;\.:">)])?
+XTerm.vt100.on4Clicks: regex .*
+XTerm.vt100.on5Clicks: line
 XTerm.vt100.rightScrollBar: true
 XTerm.vt100.saveLines: 5000
 XTerm.vt100.scrollBar: false
+XTerm.VT100*translations: #override \n\
+	Shift <Btn1Up>: exec-formatted("xdg-open '%t'", SELECT)
