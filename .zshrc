@@ -49,3 +49,4 @@ function hgrep { repeat $1; do read -r; print -r -- $REPLY; done; grep "${@:2}";
 function info { command info "$@" | $PAGER; }
 function u { dfm pull && dfm submodule update && dfm install; }
 function x { (cd && startx >|~/.xlog 2>&1 &) && clear && lock -np }
+builtin():
