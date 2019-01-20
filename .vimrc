@@ -62,6 +62,7 @@ autocmd Filetype gitcommit,mail set cc=72
 autocmd Filetype ldif set cc=79
 autocmd Filetype sh autocmd BufWritePost * silent !chmod +x %
 autocmd Filetype tex set makeprg=make\ %:t:r.pdf
+autocmd Filetype zsh set et sts=2 sw=2
 
 if filereadable(expand("~/.vim/autoload/plug.vim"))
 	call plug#begin('~/.vim/plugged')
