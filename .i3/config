@@ -121,6 +121,11 @@ bar {
         status_command i3status
 }
 
+focus_follows_mouse no
+for_window [tiling] border pixel 1
+
+client.focused #CCCCCC #CCCCCC #FFFFFF #CCCCCC #CCCCCC
+
 workspace 1 output VGA-1
 assign [title="IRC"] 1
 exec xterm -title IRC -e mosh gcp
