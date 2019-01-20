@@ -121,6 +121,14 @@ bar {
         status_command i3status
 }
 
-assign [class="chromium-browser"] 2
+workspace 1 output VGA-1
+assign [title="IRC"] 1
+exec xterm -title IRC -e mosh gcp
 
-exec --no-startup-id i3-msg 'workspace 1; exec xterm -e "mosh c"; exec chrome;'
+workspace 2 output HDMI-1
+assign [class="Chromium\-browser"] 2
+exec chrome
+
+workspace 10 output eDP-1
+assign [title="authpf"] 10
+exec xterm -title authpf -e zsh -c "while :; do ssh -o ServerAliveInterval=15 laptop@192.168.1.1; done"
