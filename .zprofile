@@ -3,6 +3,6 @@ export EDITOR=vim
 export LANG=en_US.UTF-8
 export LESS=-cFiRX
 export PAGER=less
-path+=(~/bin)
+path+=(~/bin ~/ports/infrastructure/bin)
 
 [[ -z $SSH_CLIENT && $OSTYPE != darwin* ]] && eval "$(ssh-agent -s)"
