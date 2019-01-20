@@ -34,6 +34,7 @@ if !isdirectory(expand("~/.vim/undodir"))
 	call mkdir(expand("~/.vim/undodir"),"p",0700)
 end
 
+nnoremap <leader>m :w \| make<CR>
 nnoremap <leader>s :setlocal spell! spelllang=en_us<cr>
 
 nnoremap dm :<C-u>set diff!<CR>
