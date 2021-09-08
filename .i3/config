@@ -18,7 +18,7 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec xterm
+bindsym $mod+Return exec exec xterm
 
 # kill focused window
 bindsym $mod+Shift+Q kill
@@ -118,7 +118,7 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
+        status_command exec ~/bin/status
 }
 
 focus_follows_mouse no
@@ -128,7 +128,7 @@ client.focused #CCCCCC #CCCCCC #FFFFFF #CCCCCC #CCCCCC
 
 workspace 1 output VGA-1
 assign [title="IRC"] 1
-exec xterm -title IRC -e mosh gcp
+exec exec xterm -title IRC -e mosh gcp
 
 workspace 2 output HDMI-1
 assign [class="Chromium\-browser"] 2
