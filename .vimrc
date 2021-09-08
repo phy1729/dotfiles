@@ -25,7 +25,7 @@ set undodir=~/.vim/undodir
 set undofile
 set undolevels=1000
 set visualbell
-set wildignore=*.swp
+set wildignore=*.o,*.swp
 set wildignorecase
 set wildmenu
 set wildmode=longest:full,full
