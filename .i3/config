@@ -134,6 +134,3 @@ workspace 2 output HDMI-1
 assign [class="Chromium\-browser"] 2
 exec chrome
 
-workspace 10 output eDP-1
-assign [title="authpf"] 10
-exec xterm -title authpf -e zsh -c "while :; do ssh -o ServerAliveInterval=15 laptop@192.168.1.1; done"
