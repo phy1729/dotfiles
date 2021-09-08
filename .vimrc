@@ -69,20 +69,12 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
 
 	Plug 'robertmeta/nofrils'
 
-	Plug 'tpope/vim-eunuch'
-
 	Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
 	nnoremap <leader>u :UndotreeToggle<cr>
-
-	Plug 'godlygeek/tabular', { 'on': 'Tabularize' }
-	noremap <leader>T# :Tabularize /#<cr>
-	noremap <leader>T, :Tabularize /,<cr>
 
 	Plug 'mattn/webapi-vim', { 'on': 'Gist' }
 	Plug 'mattn/gist-vim', { 'on': 'Gist' }
 	let g:gist_post_private = 1
-
-	Plug 'chase/vim-ansible-yaml', { 'for': 'ansible' }
 
 	call plug#end()
 	colorscheme nofrils-dark
