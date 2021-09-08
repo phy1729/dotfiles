@@ -3,4 +3,4 @@ xrandr --output VGA-1 --auto
 xrandr --output HDMI-1 --auto --right-of VGA-1
 xsetroot -solid black
 xset -b
-i3
+exec i3
