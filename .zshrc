@@ -1,8 +1,8 @@
-[ -n "$SSH_CLIENT" -a -z "$TMUX" ] && whence tmux >/dev/null &&
+[[ -n "$SSH_CLIENT" && -z "$TMUX" ]] && whence tmux >/dev/null &&
 	{ tmux attach || tmux new-session }
 
 FPATH="$HOME/.zshcomp:$FPATH"
-PROMPT="%m:%~%(?,,%F{red})%#%f "
+PROMPT='%m:%~%(?,,%F{red})%#%f '
 
 bindkey -e
 
