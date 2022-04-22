@@ -20,6 +20,9 @@ compdef pl=print
 v() { vim $@; }
 compdef v=vim
 
+unalias run-help
+unalias which-command
+
 alias -s mp{3,4}=mplayer
 alias -s ogg=mplayer
 alias -s pdf='(){ mupdf "$@" >& /dev/null &| exit }'
