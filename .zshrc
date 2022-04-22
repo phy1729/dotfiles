@@ -18,6 +18,7 @@ info() { command info "$@" | $PAGER; }
 ls() { command ls -hlF $@; }
 pl() { print -rl -- $@; }
 compdef pl=print
+sa() { ssh-add ~/.ssh/id_*~*.pub; }
 v() { vim $@; }
 compdef v=vim
 x() { (( $+DISPLAY )) && return 1; (cd && xinit >|~/.xlog 2>&1 &) && clear && lock -np }
