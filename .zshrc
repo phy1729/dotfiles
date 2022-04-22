@@ -14,9 +14,11 @@ setopt \
 autoload -Uz compinit
 compinit
 
-alias ls='ls -hlF'
-alias pl='print -rl --'
-alias v=vim
+ls() { command ls -hlF $@; }
+pl() { print -rl -- $@; }
+compdef pl=print
+v() { vim $@; }
+compdef v=vim
 
 alias -s mp{3,4}=mplayer
 alias -s ogg=mplayer
