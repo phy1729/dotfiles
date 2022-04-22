@@ -40,3 +40,23 @@ dfm() {
 	command git --git-dir=$HOME/.dotfiles --work-tree=$HOME "$@"
 }
 compdef dfm=git
+
+sgit() {
+	local d
+	local -a success failure
+
+	for d in */.git(:h); do
+		print -P -- "%F{cyan}=== $d ===%f"
+		if git -C $d "$@"; then
+			print -P -- $d '%F{green}success%f'
+			success+=($d)
+		else
+			print -P -- $d '%F{red}failure%f'
+			failure+=($d)
+		fi
+	done
+
+	(( $#success )) && print -P '%F{green}success%f:' $success
+	(( $#failure )) && print -P '%F{red}failure%f:' $failure
+}
+compdef sgit=git
