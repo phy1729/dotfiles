@@ -2,19 +2,14 @@
 	{ tmux attach || tmux new-session }
 
 FPATH="$HOME/.zshcomp:$FPATH"
-HISTFILE=~/.histfile
-HISTSIZE=1000
 PROMPT="%m:%~%(?,,%F{red})%#%f "
-SAVEHIST=100000
 
 bindkey -e
 
 setopt \
        cbases \
        noclobber \
-       extendedglob \
-       histignorealldups \
-       histignorespace
+       extendedglob
 
 autoload -Uz compinit
 compinit
