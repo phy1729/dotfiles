@@ -36,3 +36,7 @@ function :h { vim +"h" +"h $1" +only +'nnoremap q :q!<CR>'; }
 function quote-:h { [[ $BUFFER = :h\ * ]] && BUFFER=":h ${(q)BUFFER:3}" }
 zle -N zle-line-finish quote-:h
 
+dfm() {
+	command git --git-dir=$HOME/.dotfiles --work-tree=$HOME "$@"
+}
+compdef dfm=git
