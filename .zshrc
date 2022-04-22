@@ -14,11 +14,13 @@ setopt \
 autoload -Uz compinit
 compinit
 
+info() { command info "$@" | $PAGER; }
 ls() { command ls -hlF $@; }
 pl() { print -rl -- $@; }
 compdef pl=print
 v() { vim $@; }
 compdef v=vim
+x() { (( $+DISPLAY )) && return 1; (cd && xinit >|~/.xlog 2>&1 &) && clear && lock -np }
 
 unalias run-help
 unalias which-command
@@ -33,5 +35,3 @@ function :h { vim +"h" +"h $1" +only +'nnoremap q :q!<CR>'; }
 function quote-:h { [[ $BUFFER = :h\ * ]] && BUFFER=":h ${(q)BUFFER:3}" }
 zle -N zle-line-finish quote-:h
 
-function info { command info "$@" | $PAGER; }
-function x { (cd && startx >|~/.xlog 2>&1 &) && clear && lock -np }
