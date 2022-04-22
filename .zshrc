@@ -28,8 +28,7 @@ unalias which-command
 
 alias -s mp{3,4}=mplayer
 alias -s ogg=mplayer
-alias -s pdf='(){ mupdf "$@" >& /dev/null &| exit }'
-
+alias -s pdf='(){ mupdf -- "$@" >& /dev/null &| exit }'
 
 # map :h to opening vim's help in fullscreen
 function :h { vim +"h" +"h $1" +only +'nnoremap q :q!<CR>'; }
